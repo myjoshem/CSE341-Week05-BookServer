@@ -1,6 +1,9 @@
-const routes = require('express').Router();
-const myController = require('../controllers');
+const express = require('express');
+const router = express.Router();
+const localContacts = require('../data/local_contacts.json');
 
-routes.get('/', myController.amazingFunction);
+router.get('/contacts', (req, res) => {
+  res.json(localContacts);
+});
 
-module.exports = routes;
+module.exports = router;
