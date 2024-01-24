@@ -1,12 +1,18 @@
+/* global module */
+
 const express = require('express');
 const router = express.Router();
 
-//methods for comm with 
+// Methods for communication
 const contactsMethod = require('../controllers/contacts');
 
-//gets all contacts
-router.get('/', contactsMethod.getContacts);
-//gets one contact
+// Gets one contact
 router.get('/:id', contactsMethod.getOne);
+
+// Local json contacts
+//router.get('/contacts', contactsMethod.getLocalContacts);
+
+// Gets all contacts
+router.get('/', contactsMethod.getContacts);
 
 module.exports = router;

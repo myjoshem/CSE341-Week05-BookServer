@@ -1,5 +1,7 @@
-const ObjectId = require('mongodb').ObjectId;
+/* global module */
+
 const mongodb = require('../db/connect');
+const ObjectId = require('mongodb').ObjectId;
 
 async function getContacts(req, res) {
   try {
@@ -14,29 +16,32 @@ async function getContacts(req, res) {
   }
 }
 
-const getOne = async (req, res, next) => {
-  const userId = req.params.id;
-
-// Validate that userId is a valid ObjectId
-if (!ObjectId.isValid(userId)) {
-  return res.status(400).json({ error: 'Invalid ObjectId' });
-}
-
-// If validation passes, create the ObjectId
-const objectId = new ObjectId(userId);
+const getOne = async (req, res) => {
   try {
-    const db = await mongodb.getDb(); // Use the getDb function
-    const result = await db.collection('contacts').find({ _id: userId }).toArray();
+    const db = await mongodb.getDb(); // U
+    const userId = new ObjectId(req.params.id);
+    const result = await db.collection('contacts')
+      .find({ _id: userId })
+      .toArray();
 
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(result[0]);
+    if (result.length === 0) {
+      res.status(404).json({ error: 'Contact not found' });
+    } else {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(result[0]);
+    }
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
 
+const getLocalContacts = (req, res) => {
+  res.json('../data/contacts');
+};
+
 module.exports = {
   getContacts,
   getOne,
+  getLocalContacts
 };

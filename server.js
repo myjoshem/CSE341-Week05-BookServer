@@ -1,11 +1,8 @@
+/* global process */
 const express = require('express');
-const app = express();
-const dotenv = require('dotenv').config();
 const mongodb = require('./db/connect'); // Assuming connect.js exports connectToDatabase
-
 const PORT = process.env.PORT || 8080;
-
-app.use('/', require('./routes/contacts'));
+const app = express();
 
 app.use(express.json());
 
@@ -14,12 +11,14 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', require('./routes'));
+const routes = require('./routes/contacts.js');
+app.use('/', routes);
 
 const startServer = async () => {
   try {
-    // Use the outer mongodb variable, not redeclare it
-    const db = await mongodb.connectToDatabase();
+    // If you don't plan on using db within the function, you can remove it
+    await mongodb.connectToDatabase();
+
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });

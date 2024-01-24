@@ -1,3 +1,5 @@
+/* global process, module */
+
 const dotenv = require('dotenv');
 dotenv.config(); // Move dotenv.config() to be called before using process.env
 const MongoClient = require('mongodb').MongoClient;
@@ -29,5 +31,5 @@ const getDb = async () => {
 
 module.exports = {
   connectToDatabase,
-  getDb,
+  getDb
 };
