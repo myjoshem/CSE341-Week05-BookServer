@@ -21,7 +21,7 @@ const getOne = async (req, res) => {
     const db = await mongodb.getDb(); // U
     const userId = new ObjectId(req.params.id);
     const result = await db.collection('contacts')
-      .find({ _id: userId })
+      .findOne({ _id: userId })
       .toArray();
 
     if (result.length === 0) {
