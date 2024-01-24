@@ -12,7 +12,11 @@ const connectToDatabase = async () => {
     return _db;
   }
   try {
-    const client = await MongoClient.connect(process.env.MONGODB_URI);
+    const client = await MongoClient.connect(process.env.MONGODB_URI, {
+      tls: true, // Add this option for TLS support
+      tlsAllowInvalidCertificates: true, // Optional: Allow invalid certificates (useful for testing, not recommended for production)
+    });
+
     _db = client.db();
     console.log('Connected to MongoDB');
     return _db;
