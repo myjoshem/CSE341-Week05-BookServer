@@ -1,23 +1,23 @@
 [
-    {
-        "firstName": "Michelle",
-        "lastName": "Markham",
-        "email": "michellejmarkham@gmail.com",
-        "favoriteColor": "black",
-        "birthday": "05/13/1969"
-    },
-    {
-        "firstName": "Joshua",
-        "lastName": "Markham",
-        "email": "joshuafakeemail@gmail.com",
-        "favoriteColor": "blue",
-        "birthday": "07/10/2009"
-    },
-    {
-        "firstName": "Emily",
-        "lastName": "Markham",
-        "email": "emilyfakeemail@gmail.com",
-        "favoriteColor": "aqua",
-        "birthday": "10/17/2012"
-    }
+  {
+    "firstName": "Michelle",
+    "lastName": "Markham",
+    "email": "michellejmarkham@gmail.com",
+    "favoriteColor": "black",
+    "birthday": "05/13/1969"
+  },
+  {
+    "firstName": "Joshua",
+    "lastName": "Markham",
+    "email": "joshuafakeemail@gmail.com",
+    "favoriteColor": "blue",
+    "birthday": "07/10/2009"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Markham",
+    "email": "emilyfakeemail@gmail.com",
+    "favoriteColor": "aqua",
+    "birthday": "10/17/2012"
+  }
 ]

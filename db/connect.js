@@ -1,3 +1,5 @@
+/* global process, module */
+
 const dotenv = require('dotenv');
 dotenv.config(); // Move dotenv.config() to be called before using process.env
 const MongoClient = require('mongodb').MongoClient;
@@ -10,7 +12,11 @@ const connectToDatabase = async () => {
     return _db;
   }
   try {
-    const client = await MongoClient.connect(process.env.MONGODB_URI);
+    const client = await MongoClient.connect(process.env.MONGODB_URI, {
+      tls: true, // Add this option for TLS support
+      tlsAllowInvalidCertificates: true, // Optional: Allow invalid certificates (useful for testing, not recommended for production)
+    });
+
     _db = client.db();
     console.log('Connected to MongoDB');
     return _db;
@@ -29,5 +35,5 @@ const getDb = async () => {
 
 module.exports = {
   connectToDatabase,
-  getDb,
+  getDb
 };
