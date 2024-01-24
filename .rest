@@ -1,12 +1,66 @@
-//LocalHost
+// LocalHost
 GET http://localhost:8080 HTTP/1.1
 
 ###
 GET http://localhost:8080/65ac6d77bb0807f19ac90a0e HTTP/1.1
 
-//Production
+###
+POST http://localhost:8080 HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane.doe@example.com",
+  "favoriteColor": "purple",
+  "birthday": "02/01/1990"
+}
+
+###
+PUT http://localhost:8080/65ac6d77bb0807f19ac90a0e HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "you",
+  "lastName": "User",
+  "email": "updated.user@example.com",
+  "favoriteColor": "red",
+  "birthday": "02/02/2000"
+}
+
+###
+DELETE http://localhost:8080/65b0bf5f8a77f69b21760f7f HTTP/1.1
+
+// Production
 ###
 GET https://myjoshem-cse341.onrender.com/ HTTP/1.1
 
 ###
 GET https://myjoshem-cse341.onrender.com/65ac6d77bb0807f19ac90a0e HTTP/1.1
+
+###
+POST https://myjoshem-cse341.onrender.com HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane.doe@example.com",
+  "favoriteColor": "purple",
+  "birthday": "02/01/1990"
+}
+
+###
+PUT https://myjoshem-cse341.onrender.com/65ac6d77bb0807f19ac90a0e HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "jojo",
+  "lastName": "User",
+  "email": "updated.user@example.com",
+  "favoriteColor": "red",
+  "birthday": "02/02/2000"
+}
+
+###
+DELETE https://myjoshem-cse341.onrender.com/65ac6d77bb0807f19ac90a0e HTTP/1.1
