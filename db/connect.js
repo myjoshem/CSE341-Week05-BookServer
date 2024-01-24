@@ -14,7 +14,7 @@ const connectToDatabase = async () => {
   try {
     const client = await MongoClient.connect(process.env.MONGODB_URI, {
       tls: true, // Add this option for TLS support
-      tlsAllowInvalidCertificates: true, // Optional: Allow invalid certificates (useful for testing, not recommended for production)
+     // tlsAllowInvalidCertificates: true, // Optional: Allow invalid certificates (useful for testing, not recommended for production)
     });
 
     _db = client.db();
