@@ -18,17 +18,16 @@ async function getContacts(req, res) {
 
 const getOne = async (req, res) => {
   try {
-    const db = await mongodb.getDb(); // U
+    const db = await mongodb.getDb(); // Use the getDb function
     const userId = new ObjectId(req.params.id);
     const result = await db.collection('contacts')
-      .findOne({ _id: userId })
-      .toArray();
+      .findOne({ _id: userId });
 
-    if (result.length === 0) {
+    if (!result) {
       res.status(404).json({ error: 'Contact not found' });
     } else {
       res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(result[0]);
+      res.status(200).json(result);
     }
   } catch (error) {
     console.error(error);
