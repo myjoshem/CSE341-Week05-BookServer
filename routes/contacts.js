@@ -10,13 +10,13 @@ router.get('/:id', contactsMethod.getOne);
 // Gets all contacts
 router.get('/', contactsMethod.getContacts);
 
-// Create a new contact
-router.post('/', contactsMethod.createContact);
-
 // Update a contact
 router.put('/:id', contactsMethod.updateContact);
 
 // Delete a contact
 router.delete('/:id', contactsMethod.deleteContact);
+
+// Create a new contact
+router.post('/', contactsMethod.createContact);
 
 module.exports = router;

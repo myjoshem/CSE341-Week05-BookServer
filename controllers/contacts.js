@@ -42,7 +42,7 @@ const createContact = async (req, res) => {
     const { firstName, lastName, email, favoriteColor, birthday } = req.body;
 
     // Validate required fields
-    if (!firstName || !lastName || !email) {
+    if (!firstName || !lastName || !email || !favoriteColor || !birthday ) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
