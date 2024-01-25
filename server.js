@@ -10,6 +10,11 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
+// Middleware to set Content-Security-Policy headers
+app.use((req, res, next) => {
+  res.setHeader('Content-Security-Policy', "default-src 'self'");
+  next();
+});
 
 const routes = require('./routes/contacts.js');
 app.use('/', routes);
