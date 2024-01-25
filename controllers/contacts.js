@@ -37,12 +37,12 @@ const getOne = async (req, res) => {
 const createContact = async (req, res) => {
   try {
     const db = await mongodb.getDb();
-    
+
     // Extract data from the request body
     const { firstName, lastName, email, favoriteColor, birthday } = req.body;
 
     // Validate required fields
-    if (!firstName || !lastName || !email || !favoriteColor || !birthday ) {
+    if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -52,7 +52,7 @@ const createContact = async (req, res) => {
       lastName,
       email,
       favoriteColor,
-      birthday,
+      birthday
     });
 
     // Return the new contact id in the response body
@@ -67,7 +67,7 @@ const updateContact = async (req, res) => {
   try {
     const db = await mongodb.getDb();
     const userId = new ObjectId(req.params.id);
-    
+
     // Extract data from the request body
     const { firstName, lastName, email, favoriteColor, birthday } = req.body;
 
@@ -77,10 +77,12 @@ const updateContact = async (req, res) => {
     }
 
     // Update the contact
-    const result = await db.collection('contacts').updateOne(
-      { _id: userId },
-      { $set: { firstName, lastName, email, favoriteColor, birthday } }
-    );
+    const result = await db
+      .collection('contacts')
+      .updateOne(
+        { _id: userId },
+        { $set: { firstName, lastName, email, favoriteColor, birthday } }
+      );
 
     // Check if the contact was updated successfully
     if (result.matchedCount === 0) {
@@ -121,5 +123,5 @@ module.exports = {
   getOne,
   createContact,
   updateContact,
-  deleteContact,
+  deleteContact
 };
