@@ -17,6 +17,12 @@ app.use((req, res, next) => {
   res.setHeader('Content-Type', 'application/json');
   next();
 });
+// Middleware to set Content-Security-Policy headers
+app.use((req, res, next) => {
+  // Setting the Content-Security-Policy header to allow inline styles and data URI for fonts
+  res.setHeader('Content-Security-Policy', "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:");
+  next();
+});
 
 // Importing routes from a separate file and mounting them on the root path
 const routes = require('./routes/contacts.js');
