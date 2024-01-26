@@ -12,14 +12,7 @@ app.use(express.json()); // Adding middleware to parse JSON in incoming requests
 // Use the cors middleware to handle CORS headers
 app.use(cors());
 
-// Middleware to set Content-Security-Policy headers, this is restrictive, maybe change in future to allow external resources if needed
-app.use((req, res, next) => {
-  // Setting the Content-Security-Policy header to only allow resources from the same origin ('self')
-  res.setHeader('Content-Security-Policy', "default-src 'self'");
-  next(); // Passing control to the next middleware in the chain
-});
-
-//Middleware to format response for all routes
+// Middleware to format response for all routes
 app.use((req, res, next) => {
   res.setHeader('Content-Type', 'application/json');
   next();
