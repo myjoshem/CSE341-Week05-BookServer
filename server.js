@@ -19,6 +19,12 @@ app.use((req, res, next) => {
   next(); // Passing control to the next middleware in the chain
 });
 
+//Middleware to format response for all routes
+app.use((req, res, next) => {
+  res.setHeader('Content-Type', 'application/json');
+  next();
+});
+
 // Importing routes from a separate file and mounting them on the root path
 const routes = require('./routes/contacts.js');
 app.use('/', routes);
