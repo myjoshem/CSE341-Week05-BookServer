@@ -6,31 +6,30 @@ const cors = require('cors'); // Importing the cors middleware
 const mongodb = require('./db/connect');
 const PORT = process.env.PORT || 8080;
 const app = express(); // Creating an instance of the Express application
-//const swaggerUi = require('swagger-ui-express');
-//const swaggerDocument = require('./swagger-output.json');
 
 app.use(express.json()); // Adding middleware to parse JSON in incoming requests
 
 // Use the cors middleware to handle CORS headers
 app.use(cors());
 
-// Middleware to format response for all routes
+// Middleware to handle CORS headers
 app.use((req, res, next) => {
-  res.setHeader('Content-Type', 'application/json');
-  next();
-});
-// Middleware to set Content-Security-Policy headers
-app.use((req, res, next) => {
-  // Setting the Content-Security-Policy header to allow inline styles and data URI for fonts
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Adjust to only allow requests from specific domains in production
   res.setHeader(
-    'Content-Security-Policy',
-    "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:"
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
   );
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   next();
 });
 
+/* // Middleware to format response for all routes
+app.use('/contacts', (req, res, next) => {
+  res.setHeader('Content-Type', 'application/json');
+  next();
+}); */
+
 // Importing routes from a separate file and mounting them on the root path
-//const routes = require('./routes/contacts.js');
 app.use('/', require('./routes'));
 
 // Function to start the server asynchronously
