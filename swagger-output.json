@@ -5,7 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "https://myjoshem-cse341.onrender.com, localhost:8080",
+  "host": "myjoshem-cse341.onrender.com",
   "basePath": "/api-docs",
   "schemes": [
     "http",
