@@ -6,8 +6,8 @@
     "version": "1.0.0"
   },
   "host": "myjoshem-cse341.onrender.com",
+  "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
