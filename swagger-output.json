@@ -6,7 +6,6 @@
     "version": "1.0.0"
   },
   "host": "myjoshem-cse341.onrender.com",
-  "basePath": "/api-docs",
   "schemes": [
     "http",
     "https"

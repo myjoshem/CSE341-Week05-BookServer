@@ -33,7 +33,7 @@ DELETE http://localhost:8080/contacts/65ac6f2434a91f6062cc44b2 HTTP/1.1
 
 // PRODUCTION
 ###
-GET https://myjoshem-cse341.onrender.com/ HTTP/1.1
+GET https://myjoshem-cse341.onrender.com/contacts HTTP/1.1
 
 ###
 GET https://myjoshem-cse341.onrender.com/65b0bf008a77f69b21760f7e HTTP/1.1
