@@ -36,18 +36,18 @@ DELETE http://localhost:8080/books/65ac6f2434a91f6062cc44b2 HTTP/1.1
 GET https://cse341-book-server.onrender.com/books HTTP/1.1
 
 ###
-GET https://cse341-book-server.onrender.com/books/65b0bf008a77f69b21760f7e HTTP/1.1
+GET https://cse341-book-server.onrender.com/books/65c8238714c82e951cda5c7c HTTP/1.1
 
 ###
 POST https://cse341-book-server.onrender.com/books HTTP/1.1
 Content-Type: application/json
 
 {
-  "title": "Alice",
-  "author": "Carpenter",
-  "description": "alice.johnson@example.com",
-  "genre": "purple",
-  "publication_date": "08/15/1985"
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A philosophical novel following the journey of a young Andalusian shepherd named Santiago as he seeks his Personal Legend.",
+    "genre": "Fiction",
+    "publication_date": "1988-01-01"
 }
 
 ###
@@ -55,11 +55,11 @@ PUT https://cse341-book-server.onrender.com/65ac6f7434a91f6062cc44b3 HTTP/1.1
 Content-Type: application/json
 
 {
-  "title": "Ermengarde",
-  "author": "User",
-  "description": "updated.user@example.com",
-  "genre": "red",
-  "publication_date": "02/02/2000"
+  "title": "The High-Five Habit",
+  "author": "Mel Robbins",
+  "description": "A motivational book that introduces the simple yet powerful practice of giving yourself a high-five as a way to boost confidence, motivation, and happiness.",
+  "genre": "Self-Help",
+  "publication_date": "2021-09-28"
 }
 
 ###
