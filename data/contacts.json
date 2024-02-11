@@ -1,23 +1,51 @@
 [
   {
-    "firstName": "Michelle",
-    "lastName": "Markham",
-    "email": "michellejmarkham@gmail.com",
-    "favoriteColor": "black",
-    "birthday": "05/13/1969"
+    "title": "The Artist's Way",
+    "author": "Julia Cameron",
+    "description": "A spiritual path to higher creativity.",
+    "genre": "Self-Help",
+    "publication_date": "09/01/1992"
   },
   {
-    "firstName": "Joshua",
-    "lastName": "Markham",
-    "email": "joshuafakeemail@gmail.com",
-    "favoriteColor": "blue",
-    "birthday": "07/10/2009"
+    "title": "The Mythical Man-Month: Essays on Software Engineering",
+    "author": "Frederick P. Brooks Jr.",
+    "description": "A classic book on software engineering and project management.",
+    "genre": "Technology",
+    "publication_date": "01/01/1975"
   },
   {
-    "firstName": "Emily",
-    "lastName": "Markham",
-    "email": "emilyfakeemail@gmail.com",
-    "favoriteColor": "aqua",
-    "birthday": "10/17/2012"
+    "title": "The Book of Mormon",
+    "author": "Various",
+    "description": "A sacred text of the Latter Day Saint movement.",
+    "genre": "Religious",
+    "publication_date": "03/26/1830"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A novel set in the American South during the 1930s.",
+    "genre": "Fiction",
+    "publication_date": "07/11/1960"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian social science fiction novel.",
+    "genre": "Science Fiction",
+    "publication_date": "06/08/1949"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A romantic novel of manners.",
+    "genre": "Romance",
+    "publication_date": "01/28/1813"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "A story of a teenager's alienation and loss of innocence.",
+    "genre": "Coming-of-Age",
+    "publication_date": "07/16/1951"
   }
 ]

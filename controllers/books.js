@@ -3,10 +3,10 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-async function getContacts(req, res) {
+async function getBooks(req, res) {
   try {
     const db = await mongodb.getDb();
-    const result = await db.collection('contacts').find().toArray();
+    const result = await db.collection('books').find().toArray();
 
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(result);
@@ -20,10 +20,10 @@ const getOne = async (req, res) => {
   try {
     const db = await mongodb.getDb();
     const userId = new ObjectId(req.params.id);
-    const result = await db.collection('contacts').findOne({ _id: userId });
+    const result = await db.collection('books').findOne({ _id: userId });
 
     if (!result) {
-      res.status(404).json({ error: 'Contact not found' });
+      res.status(404).json({ error: 'Book not found' });
     } else {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(result);
@@ -34,25 +34,25 @@ const getOne = async (req, res) => {
   }
 };
 
-const createContact = async (req, res) => {
+const createBook = async (req, res) => {
   try {
     const db = await mongodb.getDb();
 
     // Extract data from the request body
-    const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+    const { title, author, description, genre, publication_date } = req.body;
 
     // Validate required fields
-    if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
+    if (!title || !author || !description || !genre || !publication_date) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
     // Create a new contact
-    const result = await db.collection('contacts').insertOne({
-      firstName,
-      lastName,
-      email,
-      favoriteColor,
-      birthday
+    const result = await db.collection('books').insertOne({
+      title,
+      author,
+      description,
+      genre,
+      publication_date
     });
 
     // Return the new contact id in the response body
@@ -63,30 +63,30 @@ const createContact = async (req, res) => {
   }
 };
 
-const updateContact = async (req, res) => {
+const updateBook = async (req, res) => {
   try {
     const db = await mongodb.getDb();
     const userId = new ObjectId(req.params.id);
 
     // Extract data from the request body
-    const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+    const { title, author, description, genre, publication_date } = req.body;
 
     // Validate required fields
-    if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
+    if (!title || !author || !description || !genre || !publication_date) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
     // Update the contact
     const result = await db
-      .collection('contacts')
+      .collection('books')
       .updateOne(
         { _id: userId },
-        { $set: { firstName, lastName, email, favoriteColor, birthday } }
+        { $set: { title, author, description, genre, publication_date } }
       );
 
     // Check if the contact was updated successfully
     if (result.matchedCount === 0) {
-      return res.status(204).json({ error: 'Contact not found' });
+      return res.status(204).json({ error: 'Book not found' });
     }
 
     // Return HTTP status code representing successful completion
@@ -97,17 +97,17 @@ const updateContact = async (req, res) => {
   }
 };
 
-const deleteContact = async (req, res) => {
+const deleteBook = async (req, res) => {
   try {
     const db = await mongodb.getDb();
     const userId = new ObjectId(req.params.id);
 
     // Delete the contact
-    const result = await db.collection('contacts').deleteOne({ _id: userId });
+    const result = await db.collection('books').deleteOne({ _id: userId });
 
     // Check if the contact was deleted successfully
     if (result.deletedCount === 0) {
-      return res.status(404).json({ error: 'Contact not found' });
+      return res.status(404).json({ error: 'Book not found' });
     }
 
     // Return HTTP status code representing successful completion
@@ -119,9 +119,9 @@ const deleteContact = async (req, res) => {
 };
 
 module.exports = {
-  getContacts,
+  getBooks,
   getOne,
-  createContact,
-  updateContact,
-  deleteContact
+  createBook,
+  updateBook,
+  deleteBook
 };

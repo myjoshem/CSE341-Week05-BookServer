@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 /* // Middleware to format response for all routes
-app.use('/contacts', (req, res, next) => {
+app.use('/books', (req, res, next) => {
   res.setHeader('Content-Type', 'application/json');
   next();
 }); */

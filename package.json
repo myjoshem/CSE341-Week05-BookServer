@@ -22,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/myjoshem/CSE341.git"
+    "url": "git+https://github.com/myjoshem/CSE341-Week05-BookServer.git"
   },
   "author": "michelle markham",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/myjoshem/CSE341/issues"
+    "url": "https://github.com/myjoshem/CSE341-Week05-BookServer/issues"
   },
-  "homepage": "https://github.com/myjoshem/CSE341#readme",
+  "homepage": "https://github.com/myjoshem/CSE341-Week05-BookServer#readme",
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",

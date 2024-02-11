@@ -1,0 +1,23 @@
+{
+  "contact": {
+    "title": "Sarah",
+    "author": "Birch",
+    "description": "amazingwoman@test.com",
+    "genre": "Green",
+    "publication_date": "12/12/20"
+  },
+  "contact2": {
+    "title": "Jimmy",
+    "author": "Carter",
+    "description": "jCarter@test.com",
+    "genre": "Purple",
+    "publication_date": "07/12/10"
+  },
+  "contact3": {
+    "title": "Cassandra",
+    "author": "Anderson",
+    "description": "AndersonC@test.com",
+    "genre": "Yellow",
+    "publication_date": "02/22/95"
+  }
+}

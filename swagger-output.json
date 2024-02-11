@@ -2,14 +2,12 @@
   "swagger": "2.0",
   "info": {
     "title": "My MongoDB API",
-    "description": "Contacts API",
+    "description": "Books API",
     "version": "1.0.0"
   },
-  "host": "myjoshem-cse341.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["http"],
   "paths": {
     "/api-docs": {
       "get": {
@@ -21,12 +19,10 @@
         }
       }
     },
-    "/contacts/{id}": {
+    "/books/{id}": {
       "get": {
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -62,19 +58,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "title": {
                   "example": "any"
                 },
-                "lastName": {
+                "author": {
                   "example": "any"
                 },
-                "email": {
+                "description": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "genre": {
                   "example": "any"
                 },
-                "birthday": {
+                "publication_date": {
                   "example": "any"
                 }
               }
@@ -119,12 +115,10 @@
         }
       }
     },
-    "/contacts/": {
+    "/books/": {
       "get": {
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -143,19 +137,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "title": {
                   "example": "any"
                 },
-                "lastName": {
+                "author": {
                   "example": "any"
                 },
-                "email": {
+                "description": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "genre": {
                   "example": "any"
                 },
-                "birthday": {
+                "publication_date": {
                   "example": "any"
                 }
               }
