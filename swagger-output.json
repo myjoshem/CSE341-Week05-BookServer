@@ -6,7 +6,7 @@
     "version": "1.0.0"
   },
   "host": "cse341-book-server.onrender.com",
-  "basePath": "/api-docs",
+  "basePath": "/",
   "schemes": [
     "http",
     "https"
