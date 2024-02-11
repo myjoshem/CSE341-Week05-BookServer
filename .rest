@@ -20,12 +20,12 @@ Content-Type: application/json
 PUT http://localhost:8080/books/65b346a58d7d765576a4d2cb HTTP/1.1
 Content-Type: application/json
 
-{
-  "title": "dizzy",
-  "author": "thatgirl",
-  "description": "updated.user@example.com",
-  "genre": "green",
-  "publication_date": "02/02/2020"
+{ 
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "description": "Explores the history of Homo sapiens, from the Stone Age to the present.",
+    "genre": "History",
+    "publication_date": "02/10/2015"
 }
 
 ###
@@ -33,13 +33,13 @@ DELETE http://localhost:8080/books/65ac6f2434a91f6062cc44b2 HTTP/1.1
 
 // PRODUCTION
 ###
-GET https://myjoshem-cse341.onrender.com/books HTTP/1.1
+GET https://cse341-book-server.onrender.com/books HTTP/1.1
 
 ###
-GET https://myjoshem-cse341.onrender.com/books/65b0bf008a77f69b21760f7e HTTP/1.1
+GET https://cse341-book-server.onrender.com/books/65b0bf008a77f69b21760f7e HTTP/1.1
 
 ###
-POST https://myjoshem-cse341.onrender.com/books HTTP/1.1
+POST https://cse341-book-server.onrender.com/books HTTP/1.1
 Content-Type: application/json
 
 {
@@ -51,7 +51,7 @@ Content-Type: application/json
 }
 
 ###
-PUT https://myjoshem-cse341.onrender.com/books/65ac6f7434a91f6062cc44b3 HTTP/1.1
+PUT https://cse341-book-server.onrender.com/65ac6f7434a91f6062cc44b3 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -63,4 +63,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE https://myjoshem-cse341.onrender.com/books/65ac6f2434a91f6062cc44b2 HTTP/1.1
+DELETE https://cse341-book-server.onrender.com/books/65ac6f2434a91f6062cc44b2 HTTP/1.1
