@@ -5,8 +5,8 @@ const doc = {
     title: 'My MongoDB API',
     description: 'Books API'
   },
-  host: 'localhost:8080',
-  schemes: ['http']
+  host: 'cse341-book-server.onrender.com/',
+  schemes: ['https']
 };
 
 const outputFile = './swagger-output.json';
