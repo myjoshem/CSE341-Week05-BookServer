@@ -5,7 +5,7 @@ const doc = {
     title: 'My MongoDB API',
     description: 'Books API'
   },
-  host: 'cse341-book-server.onrender.com/',
+  host: 'cse341-book-server.onrender.com',
   schemes: ['https']
 };
 
