@@ -1,6 +1,6 @@
 /* global module */
 
-const { isDate, validator } = require('../helpers/validate');
+const validator = require('../helpers/validate');
 
 const saveBook = (req, res, next) => {
   const validationRule = {
@@ -8,11 +8,7 @@ const saveBook = (req, res, next) => {
     author: 'required|string',
     description: 'required|string',
     genre: 'required|string',
-    // publication_date: 'required|string',
-    publication_date: [
-        'required',
-        value => isDate(value, { format: 'MM/DD/YYYY' })
-      ]
+    publication_date: 'required|string'
   };
 
   validator(req.body, validationRule, {}, (err, status) => {
