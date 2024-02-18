@@ -7,7 +7,9 @@
   },
   "host": "cse341-book-server.onrender.com/",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
     "/api-docs": {
       "get": {
@@ -22,7 +24,9 @@
     "/books/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -67,6 +71,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "412": {
+            "description": "Precondition Failed"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -76,7 +83,9 @@
     "/books/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -132,14 +141,17 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
-          },
           "204": {
             "description": "No Content"
           },
           "400": {
             "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -157,8 +169,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
           },
           "404": {
             "description": "Not Found"
