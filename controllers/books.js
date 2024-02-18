@@ -86,11 +86,11 @@ const updateBook = async (req, res) => {
 
     // Check if the contact was updated successfully
     if (result.matchedCount === 0) {
-      return res.status(204).json({ error: 'Book not found' });
+      return res.status(404).json({ error: 'Book not found' });
     }
 
     // Return HTTP status code representing successful completion
-    res.status(200).send();
+    res.status(204).send();
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -111,7 +111,7 @@ const deleteBook = async (req, res) => {
     }
 
     // Return HTTP status code representing successful completion
-    res.status(204).send();
+    res.status(200).send();
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
