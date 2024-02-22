@@ -8,7 +8,7 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'https://"cse341-book-server.onrender.com',
+  baseURL: 'https://cse341-book-server.onrender.com',
   clientID: 'l5mVkkYCyomRd7k66bofYJJZuMvI2VeF',
   issuerBaseURL: 'https://dev-xr5aqnlm428ivf42.us.auth0.com'
 };
