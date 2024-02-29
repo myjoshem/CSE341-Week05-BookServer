@@ -26,6 +26,7 @@ router.get('/profile', requiresAuth(), (req, res) => {
 });
 
 router.use('/', require('./swagger'));
-router.use('/books', requiresAuth(),require('./books'));
+router.use('/books', requiresAuth(), require('./books'));
+router.use('/authors', requiresAuth(), require('./authors'));
 
 module.exports = router;
