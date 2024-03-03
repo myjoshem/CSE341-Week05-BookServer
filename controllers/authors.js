@@ -7,9 +7,9 @@ const dbTitle = 'authors';
 // Validate required fields with this utility function
 function checkData(req) {
   if (!req.author || !req.bio) {
-    return true;
-  } else {
     return false;
+  } else {
+    return true;
   }
 }
 
@@ -54,13 +54,14 @@ const create = async (req, res) => {
     // Validate required fields
     if (checkData(req)) {
       return res.status(400).json({ error: 'All fields are required' });
-    }
+    } else {
 
     // Create a new contact
     const result = await db.collection(dbTitle).insertOne({ author, bio });
 
     // Return the new contact id in the response body
     res.status(201).json({ _id: result.insertedId });
+  }
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
