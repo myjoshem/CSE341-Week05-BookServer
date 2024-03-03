@@ -1,23 +1,92 @@
-{
-  "contact": {
-    "title": "Sarah",
-    "author": "Birch",
-    "description": "amazingwoman@test.com",
-    "genre": "Green",
-    "publication_date": "12/12/20"
+[
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A classic novel set in the fictional town of Maycomb, Alabama, dealing with racial injustice and moral growth through the eyes of a young girl.",
+    "genre": ["Fiction", "Drama"],
+    "publication_date": "1960-07-11",
+    "language": "English",
+    "rating": 4.5
   },
-  "contact2": {
-    "title": "Jimmy",
-    "author": "Carter",
-    "description": "jCarter@test.com",
-    "genre": "Purple",
-    "publication_date": "07/12/10"
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel set in a totalitarian regime, exploring themes of surveillance, propaganda, and individual freedom.",
+    "genre": ["Science Fiction", "Dystopian Fiction"],
+    "publication_date": "1949-06-08",
+    "language": "English",
+    "rating": 4.6
   },
-  "contact3": {
-    "title": "Cassandra",
-    "author": "Anderson",
-    "description": "AndersonC@test.com",
-    "genre": "Yellow",
-    "publication_date": "02/22/95"
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A tale of love, greed, and the American Dream, set in the Roaring Twenties and narrated by Nick Carraway, a young man from Minnesota.",
+    "genre": ["Fiction", "Tragedy"],
+    "publication_date": "1925-04-10",
+    "language": "English",
+    "rating": 4.4
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "description": "The first book in the beloved Harry Potter series, following the adventures of a young wizard, Harry Potter, and his friends at Hogwarts School of Witchcraft and Wizardry.",
+    "genre": ["Fantasy", "Young Adult Fiction"],
+    "publication_date": "1997-06-26",
+    "language": "English",
+    "rating": 4.8
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A romantic novel set in rural England, focusing on the lively and independent Elizabeth Bennet and her evolving relationship with the proud Mr. Darcy.",
+    "genre": ["Romance", "Fiction"],
+    "publication_date": "1813-01-28",
+    "language": "English",
+    "rating": 4.3
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "A coming-of-age novel narrated by Holden Caulfield, a disenchanted teenager navigating the challenges of adolescence and society.",
+    "genre": ["Fiction", "Bildungsroman"],
+    "publication_date": "1951-07-16",
+    "language": "English",
+    "rating": 4.2
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "description": "An epic high-fantasy novel comprising three volumes, following the quest to destroy the One Ring and defeat the Dark Lord Sauron.",
+    "genre": ["Fantasy", "Adventure"],
+    "publication_date": "1954-07-29",
+    "language": "English",
+    "rating": 4.9
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "A fantasy novel that serves as a prelude to 'The Lord of the Rings,' chronicling the adventures of Bilbo Baggins as he accompanies a group of dwarves on a quest to reclaim their homeland.",
+    "genre": ["Fantasy", "Adventure"],
+    "publication_date": "1937-09-21",
+    "language": "English",
+    "rating": 4.7
+  },
+  {
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "description": "A mystery thriller that follows symbologist Robert Langdon as he investigates a murder in the Louvre Museum and uncovers a centuries-old secret.",
+    "genre": ["Mystery", "Thriller"],
+    "publication_date": "2003-03-18",
+    "language": "English",
+    "rating": 4.1
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A philosophical novel about a young Andalusian shepherd named Santiago who embarks on a journey to find his personal legend and fulfill his destiny.",
+    "genre": ["Fiction", "Philosophy"],
+    "publication_date": "1988-01-01",
+    "language": "English",
+    "rating": 4.5
   }
-}
+]

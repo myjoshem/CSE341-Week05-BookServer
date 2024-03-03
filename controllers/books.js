@@ -39,10 +39,10 @@ const createBook = async (req, res) => {
     const db = await mongodb.getDb();
 
     // Extract data from the request body
-    const { title, author, description, genre, publication_date } = req.body;
+    const { title, author, description, genre, publication_date, language, rating } = req.body;
 
     // Validate required fields
-    if (!title || !author || !description || !genre || !publication_date) {
+    if (!title || !author || !description || !genre || !publication_date || !language || !rating ) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -52,7 +52,8 @@ const createBook = async (req, res) => {
       author,
       description,
       genre,
-      publication_date
+      publication_date,
+      language
     });
 
     // Return the new contact id in the response body
@@ -69,10 +70,10 @@ const updateBook = async (req, res) => {
     const userId = new ObjectId(req.params.id);
 
     // Extract data from the request body
-    const { title, author, description, genre, publication_date } = req.body;
+    const { title, author, description, genre, publication_date, language, rating } = req.body;
 
     // Validate required fields
-    if (!title || !author || !description || !genre || !publication_date) {
+    if (!title || !author || !description || !genre || !publication_date || !language || !rating ) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -81,7 +82,7 @@ const updateBook = async (req, res) => {
       .collection('books')
       .updateOne(
         { _id: userId },
-        { $set: { title, author, description, genre, publication_date } }
+        { $set: { title, author, description, genre, publication_date, language, rating } }
       );
 
     // Check if the contact was updated successfully
