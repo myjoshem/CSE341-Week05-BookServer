@@ -31,10 +31,11 @@ Content-Type: application/json
 ###
 DELETE http://localhost:8080/books/65ac6f2434a91f6062cc44b2 HTTP/1.1
 
+###
 GET http://localhost:8080/authors HTTP/1.1
 
 ###
-GET http://localhost:8080/authors/1 HTTP/1.1
+GET http://localhost:8080/authors/#1 HTTP/1.1
 
 ###
 POST http://localhost:8080/authors HTTP/1.1
