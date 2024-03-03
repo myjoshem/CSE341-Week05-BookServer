@@ -79,6 +79,12 @@
                 },
                 "publication_date": {
                   "example": "any"
+                },
+                "language": {
+                  "example": "any"
+                },
+                "rating": {
+                  "example": "any"
                 }
               }
             }
@@ -154,6 +160,12 @@
                   "example": "any"
                 },
                 "publication_date": {
+                  "example": "any"
+                },
+                "language": {
+                  "example": "any"
+                },
+                "rating": {
                   "example": "any"
                 }
               }

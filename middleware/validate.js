@@ -8,7 +8,9 @@ const saveBook = (req, res, next) => {
     author: 'required|string',
     description: 'required|string',
     genre: 'required|string',
-    publication_date: 'required|string'
+    publication_date: 'required|string',
+    language: 'required|string',
+    rating: 'required|string'
   };
 
   validator(req.body, validationRule, {}, (err, status) => {
